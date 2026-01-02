@@ -1,0 +1,6 @@
+[project]
+name = "api-tool"
+version = "0.1.0"
+
+[project.scripts]
+api-tool = "api_tool.main:main"
