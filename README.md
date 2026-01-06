@@ -4,11 +4,11 @@ Beskrivning
 Detta projekt är ett enkelt CLI-verktyg (Command Line Interface) som är byggt i Python.
 Programmet hämtar data från olika API:er och kan:
 
-Visa aktuellt kryptopris
+Visa aktuella kryptopriser
 
 Visa ett slumpmässigt citat
 
-Visa väderdata för en vald stad
+Visa väderdata för vald stad
 
 Projektet är uppdelat i flera moduler och använder en virtuell miljö.
 
