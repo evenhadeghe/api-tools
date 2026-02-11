@@ -1,5 +1,5 @@
 import requests
-from api_tool.utils import logger
+from common.utils import logger
 
 def get_quote():
     url = "https://dummyjson.com/quotes/random"

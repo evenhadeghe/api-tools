@@ -1,31 +1,33 @@
-import sys
-
-
 from api_tool.crypto import get_crypto_price
-from api_tool.quotes import get_quote 
-from api_tool.weather import get_weather 
+from api_tool.quotes import get_quote
+from api_tool.weather import get_weather
+
 
 def main():
-    if len(sys.argv) < 2:
-        print("Välj ett kommando: crypto | quote | weather")
-        return
-    
-    command = sys.argv[1]
+    print("Välj ett kommando: crypto | quote | weather | exit")
 
-    if command == "crypto":
-        get_crypto_price()
+    while True:
+        command = input("> ").strip().lower()
 
-    elif command == "quote":
-        get_quote()
+        if command in ("exit", "quit", "q"):
+            print("Hejdå!")
+            break
 
-    elif command == "weather":
-        if len(sys.argv) < 3:
-            print("Ange en stad")
+        if command == "crypto":
+            get_crypto_price()
+
+        elif command == "quote":
+            get_quote()
+
+        elif command == "weather":
+            city = input("Ange en stad: ").strip()
+            if not city:
+                print("Du måste ange en stad.")
+                continue
+            get_weather(city)
+
         else:
-            get_weather(sys.argv[2])
-
-    else:
-        print("Okänt kommando")
+            print("Okänt kommando. Välj: crypto | quote | weather | exit")
 
 
 if __name__ == "__main__":
